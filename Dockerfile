@@ -18,7 +18,7 @@ RUN R -e "install.packages(c('shiny', 'dplyr', 'ggplot2', 'shinythemes'), repos=
 RUN mkdir -p /srv/shiny-server/compliance
 
 # Copy the app to the image
-COPY compliance.R /srv/shiny-server/compliance/app.R
+COPY app.R /srv/shiny-server/compliance/
 
 # Make the Shiny app readable by all users
 RUN chmod -R 755 /srv/shiny-server/
